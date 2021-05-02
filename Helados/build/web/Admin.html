@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>BEN AND JERRY’S</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300&family=Merriweather:ital@1&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <script src="./JS/validacion.js"></script>
+    </head>
+    <body>
+        <div class="contenedora">
+            <h1>Gestionar cuentas registradas</h1>
+            </div>
+            
+            <div class="containerConsulta">
+          
+                <form method="get" name="consultarregistro" action="Consultar">
+                    
+                    <div class="input-box">
+                      <span class="details">Contraseña de admin</span>
+                      <input type="password" name="contrasena" required onkeypress="return validarn(event)">
+                    </div>
+                    
+                    <div class="button">
+                    <input type="submit" value="Consultar Datos">
+                    </div>
+                    
+                    <hr>
+                    
+                </form>
+            </div>
+            
+            <div class="containerEliminar">
+                <div class="title">Ingrese el ID del usuario que desea eliminar</div>
+                <form method="post" name="formularioeliminar" action="Eliminar" onsubmit="return validarIDE(this)"><br>
+                    
+                    <div class="input-box">
+                      <span class="details">Contraseña de admin</span>
+                      <input type="password" name="contrasena" required onkeypress="return validarn(event)">
+                    </div>
+                    
+                    <div class="input-box">
+                      <span class="details">ID)</span>
+                      <input type="number" name="ideliminar" placeholder="Ingrese el id" required onkeypress="return validarn(event)">
+                    </div>
+                    <div class="button">
+                    <input type="submit" value="Eliminar Usuario">
+                    </div>
+                    
+                </form>
+            </div>
+            
+        <hr>
+        <a href="index.html">Regresar</a>
+            <hr>
+            <div class = "contenedorb">
+                
+            </div>
+    </body>
+</html>

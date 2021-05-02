@@ -18,10 +18,30 @@ and open the template in the editor.
             
         </div>
         <form name="formulario" method="get" action="Iniciar" onsubmit="return validarRegistro(this)">
-            
+            <hr>
+                    <div class="input-box">
+                      <span class="details">Nombre</span>
+                      <input type="text" name="nom_inicio" maxlength="20" placeholder="Ingrese su nombre" required>
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="input-box">
+                      <span class="details">Contraseña</span>
+                      <input type="password" name="password_inicio" maxlength="20" placeholder="Ingrese su contraseña" required>
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="button">
+                        <input type="submit" value="Iniciar">
+                    </div>
+                    <hr>
         </form>
         
     <h3>¿No estas registrado?</h3>
     <a href="Registrarme.html"><h3>Registrate aqui</h3></a>
+    <p>¿Tienes clave de administrador?</p>
+    <a href="Admin.html"><p>Da clic aqui</p></a>
     </body>
 </html>

@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>CRUD usuarios</title>
+        <title>BEN AND JERRY’S</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./CSS/style.css">
@@ -22,33 +22,33 @@ and open the template in the editor.
                     <hr>
                     <div class="input-box">
                       <span class="details">Nombre(s)</span>
-                      <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+                      <input type="text" name="nom" placeholder="Ingrese su nombre" maxlength="20" required>
                     </div>
                     
                     <br>
                     
                     <div class="input-box">
                       <span class="details">Apellido Paterno</span>
-                      <input type="text" name="appat" placeholder="Ingrese su apellido paterno" required>
+                      <input type="text" name="appa" placeholder="Ingrese su apellido paterno" maxlength="20" required>
                     </div>
                     
                     <br>
                     
                     <div class="input-box">
                       <span class="details">Apellido Materno</span>
-                      <input type="text" name="apmat" placeholder="Ingrese su apellido materno" required>
+                      <input type="text" name="apma" placeholder="Ingrese su apellido materno" maxlength="20" required>
                     </div>
                     <br>
                     <div class="input-box">
                       <span class="details">Contraseña</span>
-                      <input type="password" name="password" placeholder="Ingrese su contraseña" required>
+                      <input type="password" name="passwor" placeholder="Ingrese su contraseña" maxlength="20" required>
                     </div>
                     
                     <br>
                     
                     <div class="input-box">
                       <span class="details">Edad</span>
-                      <input type="number" name="edad" placeholder="Ingrese su edad" required onkeypress="return validarn(event)">
+                      <input type="number" name="eda" placeholder="Ingrese su edad" required onkeypress="return validarn(event)">
                     </div>
                     
                     <br>
@@ -59,7 +59,7 @@ and open the template in the editor.
                       <div class="small">
                       <p>Por ejemplo, escriba 27 de mayo del 2004 como "27052004"</p>
                       </div>
-                      <input type="text" name="birth" required onkeypress="return validarn(event)">
+                      <input type="text" name="birt" maxlength="8" required onkeypress="return validarn(event)">
                     </div>
                     
                     <br>
@@ -69,27 +69,27 @@ and open the template in the editor.
                       <div class="small">
                       <p>Escriba la su codigo postal, su localidad y si vive en un departamento escriba en numero</p>
                       </div>
-                      <input type="text" name="domicilio" placeholder="Ingrese su domicilio" required>
+                      <input type="text" name="domicili" maxlength="100" placeholder="Ingrese su domicilio" required>
                     </div>
                     
                     <br>
                     
                     <div class="input-box">
                       <span class="details">Telefono de casa</span>
-                      <input type="text" name="tel" placeholder="Ingrese numero" required>
+                      <input type="text" name="te" maxlength="14" placeholder="Ingrese numero" required>
                     </div>
                     
                     <br>
                     
                     <div class="input-box">
                       <span class="details">Telefono celular</span>
-                      <input type="text" name="cel" placeholder="Ingrese su numero" required>
+                      <input type="text" name="ce" maxlength="10" placeholder="Ingrese su numero" required>
                     </div>
                     
                     <br>
                     
                     <div class="button">
-                        <input type="submit" value="Registrarse">
+                        <input type="submit" value="Registro">
                     </div>
                     <div class="button">
                         <input type="reset" value="Eliminar Datos">

@@ -41,15 +41,25 @@ public class Registrarse extends HttpServlet {
         String password = "diegoca";
                 
         try{
-            //tipo de driver
+            //colocamos el tipo de driver
             Class.forName("com.mysql.jdbc.Driver");
+            
+            /*
+            en algunas ocaciones enviar error al conectarse con la bd
+            y eso se debe a que ya estegrado el puerto en el driver
+            URL = "jdbc:mysql://localhost/registro4iv8";
+            */
+            URL = "jdbc:mysql://localhost/heladosjimin";
             con = DriverManager.getConnection(URL, userName, password);
             set = con.createStatement();
-            System.out.println("Conexión exitosa");
+            System.out.println("Conexion exitosa");
+        
         }catch(Exception e){
-            System.out.println("Conexión no exitosa");
+            
+            System.out.println("Conexion no exitosa");
             System.out.println(e.getMessage());
             System.out.println(e.getStackTrace());
+        
         }
     }
     /**
@@ -70,16 +80,16 @@ public class Registrarse extends HttpServlet {
             String nom, appat, domicilio, apmat, password, birth, tel, cel, ip, iph;
             int edad, puerto, puertoh;
             
-            nom = request.getParameter("nombre");
-            appat = request.getParameter("appat");
-            apmat = request.getParameter("apmat");
-            password = request.getParameter("password");
-            domicilio = request.getParameter("domicilio");
-            birth = request.getParameter("birth");
-            tel = request.getParameter("tel");
-            cel = request.getParameter("cel");
+            nom = request.getParameter("nom");
+            appat = request.getParameter("appa");
+            apmat = request.getParameter("apma");
+            password = request.getParameter("passwor");
+            domicilio = request.getParameter("domicili");
+            birth = request.getParameter("birt");
+            tel = request.getParameter("te");
+            cel = request.getParameter("ce");
             
-            edad = Integer.parseInt(request.getParameter("edad"));
+            edad = Integer.parseInt(request.getParameter("eda"));
             
             
             ip = request.getLocalAddr();
@@ -96,15 +106,20 @@ public class Registrarse extends HttpServlet {
                     
             try{
                 
-                String m = "insert into cuentas (nom_usu, appat_usu, apmat_usu, edad_usu, , password_usu, birth_usu, domicilio_usu, tel_usu, cel_usu) values ('"+nom+"', '"+appat+"', '"+apmat+"', "+edad+", '"+password+"', '"+birth+"', '"+domicilio+"', '"+tel+"', '"+cel+"')";
-                //Ejecutar la sentencia
-                set.executeUpdate(m);
+                String q = "INSERT INTO heladeriaschalco"
+                         + "(nom_usu, appat_usu, apmat_usu, edad_usu, password_usu, birth_usu, domicilio_usu, tel_usu, cel_usu) "
+                         + "VALUES ('"+nom+"', '"+appat+"', '"+apmat+"', "+edad+", '"+password+"', '"+birth+"', '"+domicilio+"', '"+tel+"', '"+cel+"')";           
+//Ejecutar la sentencia
+
+                set.executeUpdate(q);
+                
                 System.out.println("Registro exitoso");
+
                 
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
                 out.println("<head>");
-                out.println("<title>Servlet Registrarse</title>");
+                out.println("<title>BEN AND JERRY’S</title>");
                 out.println("<link rel='stylesheet' href='./CSS/style.css'>");
                 out.println("<link href=\'https://fonts.googleapis.com/css2?family=Lemonada:wght@300&family=Merriweather:ital@1&family=Montserrat:wght@500&display=swap' rel='stylesheet\'>");
                 out.println("</head>");
@@ -143,7 +158,6 @@ public class Registrarse extends HttpServlet {
                 out.println("<br>"
                         + "<br>");
                        out.println("<br>"
-                               + "<br>"
                                + "<hr>"); 
                 out.println("<div class = 'contenedorb'>");
                 out.println("</div>");
@@ -155,7 +169,7 @@ public class Registrarse extends HttpServlet {
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
                 out.println("<head>");
-                out.println("<title>Servlet Registro</title>");            
+                out.println("<title>BEN AND JERRY’S</title>");            
                 out.println("</head>");
                 out.println("<body>");
                 out.println("<h1>Registro no exitoso, vuelva a intentarlo</h1>" + "<a href='Registrarme.html'>Regresar a la pagina principal</a>");
@@ -163,13 +177,17 @@ public class Registrarse extends HttpServlet {
                 out.println("</html>");
                 
                 System.out.println("No se registró en la tabla");
+                System.out.println(nom);
+                System.out.println(apmat);
+                System.out.println(cel);
                 System.out.println(e.getMessage());
                 System.out.println(e.getStackTrace());
             }
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+ 
+     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -203,7 +221,6 @@ public class Registrarse extends HttpServlet {
      *
      * @return a String containing servlet description
      */
-    
     //hace falta un destructor, el destructor libera las conexiones y la memoria de las variables
     
     public void destroy(){
