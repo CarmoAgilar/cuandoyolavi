@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1/05/2021, 08:51:20 PM
+    Author     : Fer
+*/
+body {
+  margin: 0px;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  color: black;
+}
+.body{
+    color: #40514E;
+}
+h1 {
+
+  margin: 50px auto 0 auto;
+  font-family: 'Merriweather', serif;
+  font-size: 4rem;
+  color:#bf66b0;
+}
+.subtitulo{
+  font-family: 'Lemonada', cursive;
+  font-size: 1.5rem;
+  margin-left: 150px;
+}
+.small{
+    font-size: 0.7rem;
+    font-family: cursive;
+}
+h2{
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+    color:#bf66bf;
+}
+h3{
+  font-family: 'Montserrat', sans-serif;
+}
+.lista{
+  width: 50em;
+  margin: 100px auto 100px auto;
+  text-align: left;
+  line-height: 2;
+}
+
+.logo{
+  height: 150px;
+}
+.fotorina{
+ height: 10%;
+ width: 10%;
+}
+hr{
+  border-style: none;
+  border-top-style: dotted;
+  border-color: #dfccdf;
+  border-width: 6px;
+  width: 5%;
+}
+
+.contenedora{
+  background-color: #f595f8fd;
+  position: relative;
+  padding-top : 100px;
+  margin-bottom: 20px;
+
+
+}
+
+.tituloprob{
+  padding-top: 50px;
+}
+.contenedor{
+
+}
+.contenedorb{
+  margin-top: 30px;
+  line-height: 3;
+  background-color: #f595f8fd;
+  word-spacing: 20px;
+  padding: 0 0 20px 0;
+
+}
+a{
+  color: #050606;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+a:hover{
+  color: #ed9af0;
+}
+
+#tabla {
+    align-items: center;
+    margin: 0 auto;
+    text-align: justify;
+    height: 30em;
+    width: 50%;
+}

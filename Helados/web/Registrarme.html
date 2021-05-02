@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CRUD usuarios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300&family=Merriweather:ital@1&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <script src="./JS/validar.js"></script>
+    </head>
+    <body>
+        <div class="contenedora">
+            <h1>Registro</h1>
+            </div>
+            <form name="formulario" method="get" action="Registrarse" onsubmit="return validarRegistro(this)">
+
+                    <hr>
+                    <div class="input-box">
+                      <span class="details">Nombre(s)</span>
+                      <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="input-box">
+                      <span class="details">Apellido Paterno</span>
+                      <input type="text" name="appat" placeholder="Ingrese su apellido paterno" required>
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="input-box">
+                      <span class="details">Apellido Materno</span>
+                      <input type="text" name="apmat" placeholder="Ingrese su apellido materno" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                      <span class="details">Contraseña</span>
+                      <input type="password" name="password" placeholder="Ingrese su contraseña" required>
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="input-box">
+                      <span class="details">Edad</span>
+                      <input type="number" name="edad" placeholder="Ingrese su edad" required onkeypress="return validarn(event)">
+                    </div>
+                    
+                    <br>
+                    
+
+                    <div class="input-box">
+                      <span class="details">Fecha de nacimiento</span>  
+                      <div class="small">
+                      <p>Por ejemplo, escriba 27 de mayo del 2004 como "27052004"</p>
+                      </div>
+                      <input type="text" name="birth" required onkeypress="return validarn(event)">
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="input-box">
+                      <span class="details">Domicilio</span>
+                      <div class="small">
+                      <p>Escriba la su codigo postal, su localidad y si vive en un departamento escriba en numero</p>
+                      </div>
+                      <input type="text" name="domicilio" placeholder="Ingrese su domicilio" required>
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="input-box">
+                      <span class="details">Telefono de casa</span>
+                      <input type="text" name="tel" placeholder="Ingrese numero" required>
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="input-box">
+                      <span class="details">Telefono celular</span>
+                      <input type="text" name="cel" placeholder="Ingrese su numero" required>
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="button">
+                        <input type="submit" value="Registrarse">
+                    </div>
+                    <div class="button">
+                        <input type="reset" value="Eliminar Datos">
+                    </div>
+                    
+                    
+            </form>
+            <hr>
+            <a href="index.html">Regresar</a>
+            <div class = "contenedorb">
+                
+            </div>
+    </body>
+</html>
