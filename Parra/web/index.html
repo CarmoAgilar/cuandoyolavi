@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/1ff3fcc7d1.js" crossorigin="anonymous"></script>
+    <script language="JavaScript" type="text/JavaScript" src="js/validacion.js"></script>
+    <title>Inicio</title>
+</head>
+
+<body style="background-image: url('css/img/89-892560_ice-cream-images-hd.jpg');">
+    <style>
+        
+        body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url(css/img/89-892560_ice-cream-images-hd.jpg), linear-gradient(rgba(29, 29, 29, 1) 0%, rgba(29, 29, 29, 1) 100%) ;
+    background-size: cover;
+}
+.login-box{
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+.login-box h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid rgb(0, 225, 255);
+    margin-bottom: 50px;
+}
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid rgb(0, 225, 255); 
+}
+.textbox i{
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+}
+.boton{
+    width: 100%;
+    background: none;
+    border: 2px solid rgb(0, 225, 255);
+    border-radius: 3px;
+    color: white;
+    margin-top: 10px;
+    font-size: 18px;
+}
+.boton:hover{
+    background-color: rgb(0, 225, 255);
+}
+.textbox p{
+    font-size: 10px;
+}
+        
+    </style>
+    <div class="login-box">
+        <h1>Inicio de Sesion</h1>
+        <form name="formulario" method="get" action="Iniciar">
+        <div class="textbox">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Usuario" name="nom_inicio" value="">
+        </div>
+
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Contraseña" name="password_inicio" value="">
+        </div>
+        
+        <input class="boton" type="submit" name="Inicio" value="Iniciar Sesion">
+        
+        <a href="Registrarme.html"><input class="boton" type="button" name="Registro" value="Registrarse"></a>
+        
+        <a href="Admin.html"><input class="boton" type="button" name="Ingresar como Admin" value="Ingresar como Administrador"></a>
+      
+        </form>
+        
+  <footer style="padding-top: 300px; font-size: 11px;">
+      <ul>
+          <li>Carmona Aguilar Diego</li>
+          <li>Parra Rivas Arturo Gabriel</li>
+      </ul>
+  </footer> 
+    </div>
+
+    
+</body>
+</html>
